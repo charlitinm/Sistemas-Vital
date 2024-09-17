@@ -1,0 +1,13 @@
+<?php $RECHE=$fila5 [0];?>
+<?php  $query7 = "SELECT NOMB_RECHEQUEADOR,
+SUM(UNIDADES) AS TODAS_U # Obtenemos el candidato y su repetición
+
+FROM pedidos
+WHERE NOMB_RECHEQUEADOR =$RECHE AND fecha BETWEEN '$desp' AND '$desp2'";
+$datos7= mysqli_query ($conn,$query7);
+while ($fila7 =mysqli_fetch_array($datos7)){
+	?>
+	
+	
+	
+	<td class="td0" ><?php echo $fila7[1]; ?></td>
